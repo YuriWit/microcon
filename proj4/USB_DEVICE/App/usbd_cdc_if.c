@@ -22,7 +22,7 @@
 #include "usbd_cdc_if.h"
 
 /* USER CODE BEGIN INCLUDE */
-
+#include "app_x-cube-ai.h"
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -31,8 +31,9 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-extern uint8_t AiInput[784];
-extern uint16_t InputPos;
+uint8_t AiInput[3136];
+uint8_t AiOutput[40];
+uint16_t InputPos = 0;
 /* USER CODE END PV */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
@@ -265,19 +266,29 @@ static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 	HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
 	for (int i=0; i<*Len; i++)
 	{
-		AiInput[InputPos] = Buf[i];
-		InputPos += 1;
-		if (InputPos == 784)
+		if (InputPos < 3136)
 		{
-			InputPos = 0;
-			break;
-		} else if (InputPos > 784){
-			InputPos = 0;
-			break;
+			/*
+			AiInput[InputPos] = 0;
+			InputPos++;
+			AiInput[InputPos] = 0;
+			InputPos++;
+			AiInput[InputPos] = 0;
+			InputPos++;
+			*/
+			AiInput[InputPos] = Buf[i];
+			InputPos++;
 		}
+	}
+	if (InputPos == 3136)
+	{
+		InputPos = 0;
+		MX_X_CUBE_AI_Process();
+		CDC_Transmit_FS(AiOutput, 40);
 	}
   USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &Buf[0]);
   USBD_CDC_ReceivePacket(&hUsbDeviceFS);
+
   return (USBD_OK);
   /* USER CODE END 6 */
 }

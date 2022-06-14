@@ -169,28 +169,34 @@ static int ai_run(void)
 }
 
 /* USER CODE BEGIN 2 */
+extern uint8_t AiInput[3136];
+extern uint8_t AiOutput[40];
 int acquire_and_process_data(ai_i8* data[])
 {
-  /* fill the inputs of the c-model
+  /* fill the inputs of the c-model */
   for (int idx=0; idx < AI_NETWORK_IN_NUM; idx++ )
   {
-      data[idx] = ....
+	  for (int idx2=0; idx2 < 3136; idx2++)
+	  {
+		  data[idx][idx2] = (ai_i8) AiInput[idx2];
+	  }
   }
 
-  */
   return 0;
 }
 
 int post_process(ai_i8* data[])
 {
-  /* process the predictions
+  /* process the predictions */
   for (int idx=0; idx < AI_NETWORK_OUT_NUM; idx++ )
   {
-      data[idx] = ....
-  }
+  	  for (int idx2=0; idx2 < 40; idx2++)
+  	  {
+  		  AiOutput[idx2] = (uint8_t) data[idx][idx2];
+  	  }
+    }
 
-  */
-  return 0;
+  return 1;
 }
 /* USER CODE END 2 */
 
@@ -225,11 +231,12 @@ void MX_X_CUBE_AI_Process(void)
         res = post_process(data_outs);
     } while (res==0);
   }
-
+  /*
   if (res) {
     ai_error err = {AI_ERROR_INVALID_STATE, AI_ERROR_CODE_NETWORK};
     ai_log_err(err, "Process has FAILED");
   }
+  */
     /* USER CODE END 6 */
 }
 #ifdef __cplusplus

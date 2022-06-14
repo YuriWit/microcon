@@ -53,9 +53,6 @@ I2S_HandleTypeDef hi2s3;
 SPI_HandleTypeDef hspi1;
 
 /* USER CODE BEGIN PV */
-uint8_t AiInput[784];
-uint8_t AiOutput[10];
-uint16_t InputPos = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -115,6 +112,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  /*
 	  for (int i = 0; i < 784; i++)
 	  {
 		  if (AiInput[i] != 0)
@@ -126,7 +124,7 @@ int main(void)
 			  break;
 		  }
 	  }
-	  //CDC_Transmit_FS("Waiting\r\n", 9);
+	  */
     /* USER CODE END WHILE */
 
   //MX_X_CUBE_AI_Process();
