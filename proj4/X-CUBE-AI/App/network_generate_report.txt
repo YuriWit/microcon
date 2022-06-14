@@ -1,0 +1,88 @@
+Neural Network Tools for STM32AI v1.6.0 (STM.ai v7.1.0-RC3)
+Created date          : 2022-06-12 18:32:55
+Parameters            : generate --name network -m C:/dev/microcon/TFKeras.h5 --type keras --compression 1 --verbosity 1 --workspace C:\Users\yurid\AppData\Local\Temp\mxAI_workspace2121765095003008276828210974569827 --output C:\Users\yurid\.stm32cubemx\network_output
+
+Exec/report summary (generate)
+------------------------------------------------------------------------------------------------------------------------
+model file            : C:\dev\microcon\TFKeras.h5
+type                  : keras
+c_name                : network
+compression           : None
+workspace dir         : C:\Users\yurid\AppData\Local\Temp\mxAI_workspace2121765095003008276828210974569827
+output dir            : C:\Users\yurid\.stm32cubemx\network_output
+model_name            : TFKeras
+model_hash            : f92fd7800cab3814e0e0d360a3977834
+input 1/1             : 'input_0'
+                        784 items, 3.06 KiB, ai_float, float, (1,1,1,784), domain:user/
+output 1/1            : 'dense_1'
+                        10 items, 40 B, ai_float, float, (1,1,1,10), domain:user/
+params #              : 7,850 items (30.66 KiB)
+macc                  : 8,000
+weights (ro)          : 31,400 B (30.66 KiB) (1 segment)
+activations (rw)      : 40 B (40 B) (1 segment)
+ram (total)           : 3,216 B (3.14 KiB) = 40 + 3,136 + 40
+
+Model name - TFKeras ['input_0'] ['dense_1']
+-----------------------------------------------------------------------------------------------------------------------
+id   layer (type)             oshape           param/size     macc    connected to    |   c_size   c_macc   c_type    
+-----------------------------------------------------------------------------------------------------------------------
+0    input_0 (Input)          (None,1,1,784)                                          |                    
+     dense_1_dense (Dense)    (None,1,1,10)    7,850/31,400   7,850   input_0         |                     dense()[0]
+     dense_1 (Nonlinearity)   (None,1,1,10)                   150     dense_1_dense   |                     nl()/o[1] 
+-----------------------------------------------------------------------------------------------------------------------
+model/c-model: macc=8,000/8,000  weights=31,400/31,400  activations=--/40 io=--/3,176
+
+
+
+Generated C-graph summary
+------------------------------------------------------------------------------------------------------------------------
+model name            : tfkeras
+c-name                : network
+c-node #              : 2
+c-array #             : 5
+activations size      : 40 (1 segments)
+weights size          : 31400 (1 segments)
+macc                  : 8000
+inputs                : ['input_0_output']
+outputs               : ['dense_1_output']
+
+C-Arrays (5)
+----------------------------------------------------------------------------------------------------
+c_id   name (*_array)          item/size    domain/mem-pool           c-type        fmt     comment
+----------------------------------------------------------------------------------------------------
+0      input_0_output          784/3136     user/                     float         float   /input 
+1      dense_1_dense_output    10/40        activations/**default**   float         float          
+2      dense_1_output          10/40        user/                     float         float   /output
+3      dense_1_dense_weights   7840/31360   weights/                  const float   float          
+4      dense_1_dense_bias      10/40        weights/                  const float   float          
+----------------------------------------------------------------------------------------------------
+
+C-Layers (2)
+-----------------------------------------------------------------------------------------------------
+c_id   name (*_layer)   id   layer_type   macc   rom     tensors                    shape (array id)
+-----------------------------------------------------------------------------------------------------
+0      dense_1_dense    0    dense        7850   31400   I: input_0_output          (1,1,1,784) (0) 
+                                                         W: dense_1_dense_weights   (784,1,1,10) (3)
+                                                         W: dense_1_dense_bias      (1,1,1,10) (4)  
+                                                         O: dense_1_dense_output    (1,1,1,10) (1)  
+-----------------------------------------------------------------------------------------------------
+1      dense_1          0    nl           150    0       I: dense_1_dense_output    (1,1,1,10) (1)  
+                                                         O: dense_1_output          (1,1,1,10) (2)  
+-----------------------------------------------------------------------------------------------------
+
+
+
+Complexity report per layer - macc=8,000 weights=31,400 act=40 ram_io=3,176
+------------------------------------------------------------------------------
+id   name            c_macc                    c_rom                     c_id
+------------------------------------------------------------------------------
+0    dense_1_dense   ||||||||||||||||  98.1%   |||||||||||||||| 100.0%   [0] 
+0    dense_1         |                  1.9%   |                  0.0%   [1] 
+
+Generated files (5)
+---------------------------------------------------------------------
+C:\Users\yurid\.stm32cubemx\network_output\network_config.h
+C:\Users\yurid\.stm32cubemx\network_output\network.h
+C:\Users\yurid\.stm32cubemx\network_output\network.c
+C:\Users\yurid\.stm32cubemx\network_output\network_data.h
+C:\Users\yurid\.stm32cubemx\network_output\network_data.c
