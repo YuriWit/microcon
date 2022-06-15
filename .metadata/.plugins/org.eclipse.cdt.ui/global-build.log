@@ -2381,3 +2381,10 @@ arm-none-eabi-size   Stm32MnistAI.elf
   79856	   1236	  18104	  99196	  1837c	Stm32MnistAI.elf
 Finished building: default.size.stdout
  
+11:04:01 **** Incremental Build of configuration Debug for project Stm32MnistAI ****
+make -j12 all 
+arm-none-eabi-size   Stm32MnistAI.elf 
+   text	   data	    bss	    dec	    hex	filename
+  79856	   1236	  18104	  99196	  1837c	Stm32MnistAI.elf
+Finished building: default.size.stdout
+ 
