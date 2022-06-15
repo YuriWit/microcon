@@ -26,3 +26,9 @@ feedback dos motores.
 
 ## Fluxograma do Firmware
 ![alt text](https://raw.githubusercontent.com/YuriWit/microcon/main/images/FirmwareFluxogram.png)
+
+## Principais pontos do codigo
+Os principais documentos editados foram:
+- ./Stm32MnistAI/USB_DEVICE/App/usbd_cdc_if.c
+    - CDC_Receive_FS
+    - CDC_Transmit_FS

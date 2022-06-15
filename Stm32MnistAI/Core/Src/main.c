@@ -112,19 +112,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  /*
-	  for (int i = 0; i < 784; i++)
-	  {
-		  if (AiInput[i] != 0)
-		  {
-			  MX_X_CUBE_AI_Process();
-			  HAL_Delay(1000);
-			  CDC_Transmit_FS(AiOutput, 10);
-			  HAL_Delay(1000);
-			  break;
-		  }
-	  }
-	  */
     /* USER CODE END WHILE */
 
   //MX_X_CUBE_AI_Process();
