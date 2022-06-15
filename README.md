@@ -8,6 +8,8 @@ Adquirir conhecimento sobre IAs em sistemas embarcados
 ## Motivacao
 Aplicacao da metodologia no projeto do humanoid da RoboIme
 
+![alt text](https://raw.githubusercontent.com/YuriWit/microcon/main/docs/DiagramaDeBlocosDoHardwere.png)
+
 ##  Pinout
 
 | USB | PA12 | OTG_FS_DP            |
