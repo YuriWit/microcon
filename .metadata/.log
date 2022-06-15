@@ -1372,3 +1372,6 @@ org.eclipse.core.runtime.CoreException: Setup exceptions
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 !SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2022-06-14 19:40:46.553
 !MESSAGE Setup exceptions
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-14 23:23:07.995
+!MESSAGE Indexed 'Stm32MnistAI' (40 sources, 139 headers) in 2.96 sec: 11,945 declarations; 55,411 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
