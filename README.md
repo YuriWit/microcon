@@ -1,20 +1,20 @@
-# Embarcar IA em STM
-## Descricao
-Embarcar em uma STM32 uma IA capaz de identificar os algarismos da base mnist. A IA utilizada foi o 
-medelo pre treinado encontrado no seguinte repositorio https://github.com/EN10/KerasMNIST.
+# Embarcar uma IA em STM32F4
+## Descrição
+Embarcar em uma STM32F4 uma IA capaz de identificar os algarismos da base mnist. A IA utilizada foi o 
+modelo pre treinado encontrado no seguinte repositório https://github.com/EN10/KerasMNIST.
 
-## Funcao
-Adquirir conhecimento sobre IAs em sistemas embarcados principalmente a ferramenta X-CUBE-AI da stm32.
+## Função
+Adquirir conhecimento sobre IAs em sistemas embarcados principalmente a ferramenta X-CUBE-AI da st.
 
-## Motivacao
-Aplicacao da metodologia no projeto do humanoid da RoboIme equilibra-se com base em dados de sensores e
-feedback dos motores.
+## Motivação
+Aplicação da metodologia no projeto do humanoide da RoboIme equilibra-se com base em dados de sensores e
+feedback da posição dos motores.
 
 
 ## Diagrama de Blocks do Projeto
 ![alt text](https://raw.githubusercontent.com/YuriWit/microcon/main/images/DiagramaDeBlocosDoHardwere.png)
 
-##  Pinout
+##  Pinout e Periféricos
 
 | USB | PA12 | OTG_FS_DP            |
 |-----|------|----------------------|
@@ -27,7 +27,7 @@ feedback dos motores.
 ## Fluxograma do Firmware
 ![alt text](https://raw.githubusercontent.com/YuriWit/microcon/main/images/FirmwareFluxogram.png)
 
-## Principais pontos do codigo
+## Principais pontos do código
 Os principais documentos editados foram:
 - ./Stm32MnistAI/USB_DEVICE/App/usbd_cdc_if.c
     - CDC_Receive_FS

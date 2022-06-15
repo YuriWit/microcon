@@ -7737,3 +7737,7 @@
 2022-06-14 23:34:22,677 [INFO] Middleware:561 - instanceName : STMicroelectronics.X-CUBE-AI.7.1.0 bspName : COM Port check condition failed for : !SEMDeviceJjApplicationJjApplicationTemplate
 2022-06-14 23:34:22,677 [INFO] Middleware:561 - instanceName : STMicroelectronics.X-CUBE-AI.7.1.0 bspName : COM Port check condition failed for : !SEMDeviceJjApplicationJjApplicationTemplate
 2022-06-14 23:34:22,677 [INFO] AIModelDetailledView:1984 - Analysis status: done
+2022-06-15 09:48:28,923 [INFO] Activator:177 - 
+
+
+2022-06-15 09:48:28,926 [INFO] Activator:178 - !SESSION log4j initialized
