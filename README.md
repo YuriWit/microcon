@@ -1,6 +1,7 @@
 # Embarcar IA em STM
 ## Descricao
-Embarcar numa STM32 uma IA capaz de identificar os algarismos 
+Embarcar em uma STM32 uma IA capaz de identificar os algarismos da base mnist. A IA utilizada foi o 
+medelo pre treinado encontrado no seguinte repositorio https://github.com/EN10/KerasMNIST
 
 ## Funcao
 Adquirir conhecimento sobre IAs em sistemas embarcados
@@ -8,7 +9,8 @@ Adquirir conhecimento sobre IAs em sistemas embarcados
 ## Motivacao
 Aplicacao da metodologia no projeto do humanoid da RoboIme
 
-![alt text](https://raw.githubusercontent.com/YuriWit/microcon/main/docs/DiagramaDeBlocosDoHardwere.png)
+## Diagrama de Blocks do Projeto
+![alt text](https://raw.githubusercontent.com/YuriWit/microcon/main/images/DiagramaDeBlocosDoHardwere.png)
 
 ##  Pinout
 
@@ -19,3 +21,6 @@ Aplicacao da metodologia no projeto do humanoid da RoboIme
 | USB | PA9  | VBUS_FS              |
 | USB | PC0  | OTG_FS_PowerSwitchOn |
 | USB | PD5  | OTG_FS_OverCurrent   |
+
+## Fluxograma do Firmware
+![alt text](https://raw.githubusercontent.com/YuriWit/microcon/main/images/FirmwareFluxogram.png)
