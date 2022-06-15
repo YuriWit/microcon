@@ -1,5 +1,5 @@
 
-proj4.elf:     file format elf32-littlearm
+Stm32MnistAI.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -41,15 +41,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  18 .debug_line   0001ae60  00000000  00000000  00075ac7  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000d660c  00000000  00000000  00090927  2**0
+ 19 .debug_str    000d6613  00000000  00000000  00090927  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      000000cb  00000000  00000000  00166f33  2**0
+ 20 .comment      000000cb  00000000  00000000  00166f3a  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  000058fc  00000000  00000000  00167000  2**2
+ 21 .debug_frame  000058fc  00000000  00000000  00167008  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .stab         0000009c  00000000  00000000  0016c8fc  2**2
+ 22 .stab         0000009c  00000000  00000000  0016c904  2**2
                   CONTENTS, READONLY, DEBUGGING
- 23 .stabstr      0000014d  00000000  00000000  0016c998  2**0
+ 23 .stabstr      0000014d  00000000  00000000  0016c9a0  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:

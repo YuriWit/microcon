@@ -8200,3 +8200,6 @@
 2022-06-15 09:49:09,485 [INFO] Middleware:561 - instanceName : STMicroelectronics.X-CUBE-AI.7.1.0 bspName : COM Port check condition failed for : !SEMDeviceJjApplicationJjApplicationTemplate
 2022-06-15 09:49:09,485 [INFO] Middleware:561 - instanceName : STMicroelectronics.X-CUBE-AI.7.1.0 bspName : COM Port check condition failed for : !SEMDeviceJjApplicationJjApplicationTemplate
 2022-06-15 09:49:09,488 [INFO] AIModelDetailledView:1984 - Analysis status: done
+2022-06-15 10:26:21,464 [INFO] I2sManager:626 - 9.6E7
+2022-06-15 10:26:21,464 [INFO] I2sManager:179 - I2S Clock Value : 9.6E7
+2022-06-15 10:26:21,466 [INFO] I2sManager:520 - AudioClock : 93750Divider : 2Odd : 0
