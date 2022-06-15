@@ -5,10 +5,11 @@ modelo pre treinado encontrado no seguinte repositório https://github.com/EN10/
 
 ## Função
 Adquirir conhecimento sobre IAs em sistemas embarcados principalmente a ferramenta X-CUBE-AI da st.
+O modelo em recebe por USB uma os ‘bytes’ referentes a uma imagem do banco mnist. A imagem é 28x28
+preto e branco. A IA processa a imagem na STM32F4 e retorna um vetor de confianças.
 
 ## Motivação
-Aplicação da metodologia no projeto do humanoide da RoboIme equilibra-se com base em dados de sensores e
-feedback da posição dos motores.
+Aplicação da metodologia aprendida no projeto do humanoide da RoboIme para poder equilibra-se com base em dados de sensores e feedback da posição dos motores.
 
 
 ## Diagrama de Blocks do Projeto
